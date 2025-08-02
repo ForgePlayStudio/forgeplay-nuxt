@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
+/* :root {
     
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -25,9 +25,9 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
-}
+} */
 
-.dark {
+:root {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.141 0.005 285.823);
@@ -47,6 +47,7 @@
   --border: oklch(0.274 0.006 286.033);
   --input: oklch(0.274 0.006 286.033);
   --ring: oklch(0.442 0.017 285.786);
+  --radius: 0.625rem;
 }
 @theme {
     --font-sans: "Space Grotesk", system-ui, sans-serif;
@@ -65,7 +66,7 @@
     --color-red: oklch(0.4655 0.1745 30.9); /* #a51b09 */
 }
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--color-black);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
