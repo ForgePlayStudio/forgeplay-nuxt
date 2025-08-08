@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+ 
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -17,5 +18,6 @@ export default defineNuxtConfig({
   ],
   css: [
     '@/assets/css/main.css',
+    '@/assets/css/components.css',
   ],
 })

@@ -48,7 +48,20 @@
   --input: oklch(0.274 0.006 286.033);
   --ring: oklch(0.442 0.017 285.786);
   --radius: 0.625rem;
+
+  --content-grid-px: 2rem;
+  --content-max-width: 70rem;
+ --breakout-max-width: 90rem;
+ --breakout-size: calc(var(--breakout-max-width) - var(--content-grid-px) / 2);
 }
+
+@media (max-width: theme(--breakpoint-sm)) {
+  :root {
+    --content-grid-px: 1rem;
+    
+  }
+}
+
 @theme {
     --font-sans: "Space Grotesk", system-ui, sans-serif;
     --font-display: "Pixelify Sans", ui-monospace, monospace;
@@ -92,12 +105,45 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@utility stroke-text-*{
+  -webkit-text-stroke-width: calc(var(--spacing) * --value(number, [number]));
+  -webkit-text-stroke-width: --value([percentage], [length], [string]);
+  -webkit-text-stroke-color: --value(--color-*, [color]);
+  
+}
+
+@utility wrapper-grid {
+  display: grid;
+  grid-template-columns: 
+  [full-width-start]
+  minmax(var(--content-grid-px), 1fr)
+  [breakout-start]
+  minmax(0, var(--breakout-size))
+  [content-start]
+  min(100% - var(--content-grid-px) * 2, var(--content-max-width))
+  [content-end]
+  minmax(0, var(--breakout-size))
+  [breakout-end]
+  minmax(var(--content-grid-px), 1fr)
+  [full-width-end];
+  
+  > * {
+    grid-column: content;
+  }
+  > .breakout {
+    grid-column: breakout;
+  }
+  > .full-width {
+    grid-column: full-width;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground subpixel-antialiased;
   }
 }
 
@@ -109,4 +155,9 @@ html.dark {
 }
 html.light {
   color-scheme: dark;
+}
+#main {
+  > section {
+    @apply wrapper-grid;
+  }
 }

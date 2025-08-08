@@ -1,0 +1,21 @@
+@reference './main.css';
+
+@layer components {
+    .btn {
+        @apply 
+        inline-flex 
+        items-center 
+        justify-center 
+        rounded-2xl text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+        bg-yellow text-black bg-gradient-to-r from-yellow to-orange from-50% uppercase leading-none py-4 px-6;
+        background-size: 200% 100%;
+        background-position: 0 0;
+        transition: background-position 0.3s ease-in-out;
+        box-shadow: inset 0 -6px 1px --alpha(var(--color-orange) / 50%), inset 0 6px 1px --alpha(var(--color-white) / 50%);
+        &:hover {
+            background-position: 100% 0;
+        }
+        
+        
+    }
+}
