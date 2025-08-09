@@ -25,7 +25,7 @@
         </div>
       </nav>
     </div>
-    
+    <div class="app-header__bg"/>
     
   </header>
 </template>
@@ -35,7 +35,7 @@
 
 .app-header {
   
-  @apply text-foreground wrapper-grid relative isolate;
+  @apply text-foreground wrapper-grid relative isolate -mb-3.5 z-10;
   &::before {
       @apply absolute inset-x-0 bg-yellow top-0 h-[90px] bg-gradient-to-r from-yellow from-50% to-50% to-orange -z-20;
 
@@ -48,16 +48,20 @@
       content: '';
       
     }
-  .app-header__wrapper {
-    @apply bg-red -mx-3.5 pb-1 bg-gradient-to-r from-yellow to-orange;
+  .app-header__bg {
+    @apply bg-yellow h-4.5 pb-1 bg-gradient-to-r from-yellow to-orange relative;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 284px calc(100% - 14px), 270px 100%, 14px 100%, 0 calc(100% - 14px));
-
     
+    &::before {
+      @apply absolute inset-0 bottom-1 bg-background;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 282px calc(100% - 14px), 268px 100%, 16px 100%, 2px calc(100% - 14px),  0 calc(100% - 14px));
+      content: '';
+    }
   }
   
   nav{  
-    @apply flex items-center justify-between w-full pt-4.5 pb-8 px-3.5 relative bg-background;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 282px calc(100% - 14px), 268px 100%, 16px 100%, 2px calc(100% - 14px),  0 calc(100% - 14px));
+    @apply flex items-center justify-between w-full py-4.5  px-3.5 relative ;
+
     
   }
   .app-header__logo {

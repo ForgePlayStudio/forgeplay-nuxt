@@ -1,0 +1,63 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M74.72 15H72.99V10H67.99V5H62.99H57.99H52.99H47.99H42.99H37.99H32.99H27.99H22.99H17.99H12.99V10H7.98999V15H3V20V25V30V35V40V45V50H7.98999V55H12.99V57.5V60H17.99H22.99H27.99H32.99H37.99H42.99V65H47.99V70H52.99V75H57.99H62.99V70V65V60H67.99V57.5V55H72.99V50H77.99V45V40V35V30V25V20V15H74.72Z" fill="white"/>
+<path d="M27.99 5H22.99V10H27.99V5Z" fill="black"/>
+<path d="M32.99 5H27.99V10H32.99V5Z" fill="black"/>
+<path d="M37.99 5H32.99V10H37.99V5Z" fill="black"/>
+<path d="M42.99 5H37.99V10H42.99V5Z" fill="black"/>
+<path d="M47.99 5H42.99V10H47.99V5Z" fill="black"/>
+<path d="M52.99 5H47.99V10H52.99V5Z" fill="black"/>
+<path d="M57.99 5H52.99V10H57.99V5Z" fill="black"/>
+<path d="M62.99 5H57.99V10H62.99V5Z" fill="black"/>
+<path d="M67.99 5H62.99V10H67.99V5Z" fill="black"/>
+<path d="M3 20H8V15H3L3 20Z" fill="black"/>
+<path d="M8 15H13V10H8V15Z" fill="black"/>
+<path d="M68 15H73V10H68V15Z" fill="black"/>
+<path d="M13 10H18V5L13 5V10Z" fill="black"/>
+<path d="M18 10H23V5L18 5V10Z" fill="black"/>
+<path d="M27.99 30H22.99V35H27.99V30Z" fill="black"/>
+<path d="M37.99 30H32.99V35H37.99V30Z" fill="black"/>
+<path d="M47.99 30H42.99V35H47.99V30Z" fill="black"/>
+<path d="M57.99 30H52.99V35H57.99V30Z" fill="black"/>
+<path d="M3 25H8V20H3L3 25Z" fill="black"/>
+<path d="M3 30H8V25H3L3 30Z" fill="black"/>
+<path d="M3 35H8V30H3L3 35Z" fill="black"/>
+<path d="M3 40H8V35H3L3 40Z" fill="black"/>
+<path d="M3 45H8V40H3L3 45Z" fill="black"/>
+<path d="M3 50H8V45H3L3 50Z" fill="black"/>
+<path d="M73 20H78V15H73V20Z" fill="black"/>
+<path d="M73 25H78V20H73V25Z" fill="black"/>
+<path d="M73 30H78V25H73V30Z" fill="black"/>
+<path d="M73 35H78V30H73V35Z" fill="black"/>
+<path d="M73 40H78V35H73V40Z" fill="black"/>
+<path d="M73 45H78V40H73V45Z" fill="black"/>
+<path d="M73 50H78V45H73V50Z" fill="black"/>
+<path d="M8 55H13V50H8V55Z" fill="black"/>
+<path d="M68 55H73V50H68V55Z" fill="black"/>
+<path d="M63 60H68V55H63V60Z" fill="black"/>
+<path d="M13 60H18V55H13V60Z" fill="black"/>
+<path d="M18 60H23V55H18V60Z" fill="black"/>
+<path d="M23 60H28V55H23V60Z" fill="black"/>
+<path d="M28 60H33V55H28V60Z" fill="black"/>
+<path d="M33 60H38V55H33V60Z" fill="black"/>
+<path d="M38 60H43V55H38V60Z" fill="black"/>
+<path d="M43 65H48V60H43V65Z" fill="black"/>
+<path d="M52.99 65H47.99V70H52.99V65Z" fill="black"/>
+<path d="M57.99 70H52.99V75H57.99V70Z" fill="black"/>
+<path d="M62.99 70H57.99V75H62.99V70Z" fill="black"/>
+<path d="M62.99 65H57.99V70H62.99V65Z" fill="black"/>
+<path d="M62.99 60H57.99V65H62.99V60Z" fill="black"/>
+<path d="M62.99 55H57.99V60H62.99V55Z" fill="black"/>
+<path d="M47.99 54.9301H42.99V59.9301H47.99V54.9301Z" fill="#E8E8E8"/>
+<path d="M67.99 50H62.99V55H67.99V50Z" fill="#E8E8E8"/>
+<path d="M62.99 50H57.99V55H62.99V50Z" fill="#E8E8E8"/>
+<path d="M17.99 49.99H12.99V54.99H17.99V49.99Z" fill="#E8E8E8"/>
+<path d="M22.99 49.99H17.99V54.99H22.99V49.99Z" fill="#E8E8E8"/>
+<path d="M27.99 49.99H22.99V54.99H27.99V49.99Z" fill="#E8E8E8"/>
+<path d="M32.99 49.99H27.99V54.99H32.99V49.99Z" fill="#E8E8E8"/>
+<path d="M37.99 49.99H32.99V54.99H37.99V49.99Z" fill="#E8E8E8"/>
+<path d="M42.99 49.99H37.99V54.99H42.99V49.99Z" fill="#E8E8E8"/>
+<path d="M47.99 49.99H42.99V54.99H47.99V49.99Z" fill="#E8E8E8"/>
+<path d="M52.99 59.9301H47.99V64.9301H52.99V59.9301Z" fill="#E8E8E8"/>
+<path d="M57.99 59.9301H52.99V64.9301H57.99V59.9301Z" fill="#E8E8E8"/>
+<path d="M57.99 64.9301H52.99V69.9301H57.99V64.9301Z" fill="#E8E8E8"/>
+</svg>

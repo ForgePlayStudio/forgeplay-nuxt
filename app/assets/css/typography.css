@@ -1,0 +1,38 @@
+@reference './main.css';
+
+@layer components {
+  .kicker {
+    @apply font-display font-medium text-orange uppercase tracking-widest;
+    &::before {
+      content: "/ ";
+    }
+  }
+  .section-title {
+    @apply text-xl font-bold md:text-[2.5rem] text-foreground;
+    .highlight & {
+      @apply text-2xl md:text-[4rem];
+    }
+  }
+  .page-title {
+    --text-stroke: clamp(1px, 0.02em, 2px);
+    @apply text-3xl font-bold md:text-8xl uppercase text-transparent;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: var(--text-stroke) white;
+    &::first-line {
+      @apply text-foreground;
+      -webkit-text-fill-color: var(--text-foreground);
+    }
+  }
+  .gradient-text-outline {
+    --text-stroke: clamp(1px, 0.03em, 4px);
+    background: linear-gradient(
+      to right,
+      var(--color-yellow),
+      var(--color-orange)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: var(--text-stroke) transparent;
+  }
+}
