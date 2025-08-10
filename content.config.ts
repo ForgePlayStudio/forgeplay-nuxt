@@ -15,6 +15,13 @@ export default defineContentConfig({
         icon: z.string(),
         name: z.string(),
         game_id: z.string(),
+        release_date: z.date().optional(),
+        genre: z.string().optional(),
+        age_rating: z.string().optional(),
+        engine: z.string().optional(),
+        budget: z.string().optional(),
+        platforms: z.array(z.string()).default([]),
+        user_rating: z.number().optional(),
       })
     }),
     stats: defineCollection({
@@ -24,7 +31,8 @@ export default defineContentConfig({
         groups: z.array(z.string()).default([]),
         value: z.number(),
         unit: z.string().optional(),
-        label: z.string().optional(),
+        label: z.string().optional()
+        
       })
     })
     

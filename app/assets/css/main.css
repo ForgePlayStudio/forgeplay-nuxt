@@ -75,6 +75,11 @@
     --content-grid-px: 1rem;
   }
 }
+@supports (width: round(0.02em, 1px)) {
+  :root {
+    --dynamic-stroke-width: round(0.02em, 1px);
+  }
+}
 
 @theme {
   --font-sans: "Space Grotesk", system-ui, sans-serif;
@@ -130,14 +135,17 @@
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+  --text-stroke-width: clamp(1px, var(--dynamic-stroke-width, 0.02em), 5px);
 }
 
-@utility stroke-text-* {
+@utility text-stroke-* {
   -webkit-text-stroke-width: calc(var(--spacing) * --value(number, [number]));
   -webkit-text-stroke-width: --value([percentage], [length], [string]);
   -webkit-text-stroke-color: --value(--color-*, [color]);
 }
-
+@utility text-stroke-balanced {
+  -webkit-text-stroke-width: var(--text-stroke-width);
+}
 @utility wrapper-grid {
   display: grid;
   grid-template-columns:

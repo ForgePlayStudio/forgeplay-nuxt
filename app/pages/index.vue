@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import HomeMarquee from '~/components/Home/HomeMarquee.vue';
+
 
 
 
@@ -23,8 +25,12 @@
       </BaseCopyBlock>
       <AboutStats />
       <HomeCardGrid />
+      
     </section>
+    <HomeMarquee />
+    <HomeGamesWrapper />
   </main>
+  
 </template>
 
 <style lang="postcss" scoped>

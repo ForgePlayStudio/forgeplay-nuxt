@@ -21,11 +21,13 @@ import { NuxtImg } from '#components';
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-3 md:max-lg:gap-4 gap-6">
     <div v-for="(item, index) in items" :key="index" class="card">
-      <NuxtImg :src="`/images/icons/${item.icon}`" alt="" class="w-12 h-12 mb-4" />
-      <h3 class="text-lg font-semibold text-yellow">{{ item.title }}</h3>
-      <p >{{ item.description }}</p>
+      <div class="flex flex-col gap-4">
+        <NuxtImg :src="`/images/icons/${item.icon}`" alt="" class="w-20 h-20" />
+        <h3 class="text-lg font-semibold text-yellow">{{ item.title }}</h3>
+        <p >{{ item.description }}</p>
+      </div>
     </div>
     
   </div>
