@@ -27,8 +27,9 @@ import HomeMarquee from '~/components/Home/HomeMarquee.vue';
       <HomeCardGrid />
       
     </section>
-    <HomeMarquee />
     <HomeGamesWrapper />
+    <HomeMarquee />
+    
   </main>
   
 </template>

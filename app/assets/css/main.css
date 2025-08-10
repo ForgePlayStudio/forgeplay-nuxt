@@ -96,6 +96,8 @@
   --color-yellow: oklch(0.8652 0.1768 90.38); /* #ffcc00 */
   --color-orange: oklch(0.7296 0.178 45.98); /* #FF7D36*/
   --color-red: oklch(0.4655 0.1745 30.9); /* #a51b09 */
+  --color-neutral-200: oklch(0.9249 0 0); /* #e6e6e6 */
+  --color-neutral-300: oklch(0.8452 0 0); /* #cccccc */
 }
 @theme inline {
   --color-background: var(--color-black);

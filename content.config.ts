@@ -15,6 +15,7 @@ export default defineContentConfig({
         icon: z.string(),
         name: z.string(),
         game_id: z.string(),
+        cover_image: z.string().optional(),
         release_date: z.date().optional(),
         genre: z.string().optional(),
         age_rating: z.string().optional(),
@@ -32,6 +33,23 @@ export default defineContentConfig({
         value: z.number(),
         unit: z.string().optional(),
         label: z.string().optional()
+        
+      })
+    }),
+    person: defineCollection({
+      type: 'data',
+      source: 'person/*.yml',
+      schema: z.object({
+        name: z.string(),
+        role: z.string(),
+        image: z.string().optional(),
+        skills: z.array(z.string()).default([]),
+        weapons: z.array(z.string()).default([]),
+        social: z.object({
+          twitter: z.string().optional(),
+          linkedin: z.string().optional(),
+          github: z.string().optional()
+        }).optional()
         
       })
     })

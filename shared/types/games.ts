@@ -6,3 +6,10 @@ export interface IGame {
     hero_bg: string;
     hero_image: string;
 }
+export interface IGameStatus {
+    status: 'Work in progress' | 'Released' | 'Concept';
+    comingSoon?: boolean;
+    now?: Date;
+    releaseDate?: Date;
+    timeDiff?: number;
+  }
