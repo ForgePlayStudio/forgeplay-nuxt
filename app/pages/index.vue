@@ -29,7 +29,18 @@ import HomeMarquee from '~/components/Home/HomeMarquee.vue';
     </section>
     <HomeGamesWrapper />
     <HomeMarquee />
-    
+    <BaseCtaSection
+      kicker="Beta testing"
+      title="Help us make our games better"
+      cta-label="Join the test"
+      cta-url="/join-the-test"
+      bg-image="/images/footer-bg.jpg">
+      <p class="sm:text-lg mb-10">
+        Want to try our games? 
+        <br>Choose the games you like the most and and help us make our games better.
+        <br>By becoming our tester you will be able to access exclusive content.
+      </p>
+    </BaseCtaSection>
   </main>
   
 </template>

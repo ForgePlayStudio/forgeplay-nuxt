@@ -8,7 +8,7 @@
     }
   }
   .section-title {
-    @apply text-xl font-bold md:text-[2.5rem] text-foreground;
+    @apply text-xl font-bold md:text-[2.5rem] text-foreground leading-tight;
     .highlight & {
       @apply text-2xl md:text-[4rem];
     }

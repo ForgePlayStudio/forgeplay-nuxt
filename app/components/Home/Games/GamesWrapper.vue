@@ -7,6 +7,7 @@ const { data } = await useAsyncData('games', () => {
 const gamesStatus = useState<Record<string, IGameStatus>>('gamesStatus', () => ({}));
 if (data.value) {
   for (const game of data.value) {
+    if (!game.release_date && gamesStatus.value[game.game_id]) continue;
     const status = useGameStatus(game.release_date);
     if (status.value) {
        Object.assign(gamesStatus.value, {
@@ -21,13 +22,13 @@ if (data.value) {
 <template>
   <section>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10 pb-10 relative items-start">
       <BaseCopyBlock
         kicker="Games"
         title="Our latest creations"
         cta-label="Discover our games"
         cta-url="/games"
-        class="md:sticky top-0 z-10"
+        class="md:sticky top-8 z-10"
         >
         <p class="sm:text-lg mb-6">
          We believe that video games can be much more than just entertainment! 
@@ -46,6 +47,7 @@ if (data.value) {
           >
           <span v-if="gamesStatus[game.game_id]?.comingSoon" class="rounded-full px-4 py-1 text-sm bg-red absolute top-6 left-6 inline-block z-10 drop-shadow-md">Coming soon</span>
           </BaseCoverCard>
+         
       </div>
     </div>
     </section>
