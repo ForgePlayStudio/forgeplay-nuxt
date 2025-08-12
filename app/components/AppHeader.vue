@@ -18,9 +18,24 @@
             <li><NuxtLink class="btn" to="/join-the-test">Join the Test</NuxtLink></li>
           </ul>
           <ul>
-            <li><NuxtLink href="https://discord.gg/your-discord-link" target="_blank" rel="noopener noreferrer"><SvgSocial icon-id="discord" /></NuxtLink></li>
-            <li><NuxtLink href="https://www.instagram.com/forgeplaystudio/" target="_blank" rel="noopener noreferrer"><SvgSocial icon-id="instagram" /></NuxtLink></li>
-            <li><NuxtLink href="https://forgeplay.itch.io/" target="_blank" rel="noopener noreferrer"><SvgSocial icon-id="itch" /></NuxtLink></li>
+            <li>
+              <NuxtLink href="https://discord.gg/your-discord-link" target="_blank" rel="noopener noreferrer">
+                <SvgSocial icon-id="discord" />
+                <span class="sr-only">Discord</span>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink href="https://www.instagram.com/forgeplaystudio/" target="_blank" rel="noopener noreferrer">
+                <SvgSocial icon-id="instagram" />
+                <span class="sr-only">Instagram</span>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink href="https://forgeplay.itch.io/" target="_blank" rel="noopener noreferrer">
+                <SvgSocial icon-id="itch" />
+                <span class="sr-only">itch.io</span>
+              </NuxtLink>
+            </li>
           </ul>
         </div>
       </nav>
@@ -49,7 +64,7 @@
       
     }
   .app-header__bg {
-    @apply bg-yellow h-4.5 pb-1 bg-gradient-to-r from-yellow to-orange relative;
+    @apply bg-yellow h-4.5 pb-1 bg-gradient-to-r from-yellow to-orange relative -mx-3.5;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 284px calc(100% - 14px), 270px 100%, 14px 100%, 0 calc(100% - 14px));
     
     &::before {
@@ -60,7 +75,7 @@
   }
   
   nav{  
-    @apply flex items-center justify-between w-full py-4.5  px-3.5 relative ;
+    @apply flex items-center justify-between w-full py-4.5  relative ;
 
     
   }

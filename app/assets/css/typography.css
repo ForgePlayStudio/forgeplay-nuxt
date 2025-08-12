@@ -2,20 +2,20 @@
 
 @layer components {
   .kicker {
-    @apply font-display font-medium text-orange uppercase tracking-widest;
+    @apply font-display font-medium text-orange uppercase tracking-widest drop-shadow-sm text-shadow-brown-950/70;
     &::before {
       content: "/ ";
     }
   }
   .section-title {
-    @apply text-xl font-bold md:text-[2.5rem] text-foreground leading-tight;
+    @apply text-xl font-bold md:text-[2.5rem] text-foreground leading-tight drop-shadow-lg text-shadow-brown-950/50;
     .highlight & {
       @apply text-2xl md:text-[4rem];
     }
   }
   .page-title {
     --text-stroke: clamp(1px, 0.02em, 2px);
-    @apply text-3xl font-bold md:text-8xl uppercase text-transparent;
+    @apply text-3xl font-bold md:text-8xl uppercase text-transparent text-shadow-lg text-shadow-brown-950/10;
 
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: var(--text-stroke) white;

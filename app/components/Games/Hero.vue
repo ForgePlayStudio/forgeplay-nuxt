@@ -69,6 +69,7 @@ const isGamePage = route.params.game_id !== undefined && route.params.game_id ==
   }
   .hero-content {
     @apply h-full flex flex-col justify-center gap-4 relative;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
   }
 }
 </style>
