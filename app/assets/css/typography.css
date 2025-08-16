@@ -2,7 +2,7 @@
 
 @layer components {
   .kicker {
-    @apply font-display font-medium text-orange uppercase tracking-widest drop-shadow-sm text-shadow-brown-950/70;
+    @apply font-display font-medium text-orange uppercase tracking-widest drop-shadow-sm drop-shadow-brown-950/70;
     &::before {
       content: "/ ";
     }
@@ -15,13 +15,11 @@
   }
   .page-title {
     --text-stroke: clamp(1px, 0.02em, 2px);
-    @apply text-3xl font-bold md:text-8xl uppercase text-transparent text-shadow-lg text-shadow-brown-950/10;
+    @apply text-3xl font-bold md:text-8xl/none uppercase text-transparent text-shadow-lg text-shadow-brown-950/10 leading-none;
 
-    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: var(--text-stroke) white;
     &::first-line {
-      @apply text-foreground;
-      -webkit-text-fill-color: var(--text-foreground);
+      color: var(--color-foreground);
     }
   }
   .gradient-text-outline {
@@ -34,5 +32,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: var(--text-stroke) transparent;
+  }
+  .prose-legal {
+    max-width: 80ch;
+    text-align: justify;
   }
 }

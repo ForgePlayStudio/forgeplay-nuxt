@@ -7,6 +7,17 @@ const props = defineProps<{game:Partial<GamesCollectionItem>}>();
   
 const route = useRoute();  
 const isGamePage = route.params.game_id !== undefined && route.params.game_id === props.game.game_id;
+const gamesStatus = useState<Record<string, IGameStatus>>('gamesStatus', () => shallowRef({}));
+
+if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {    
+    const status = useGameStatus(props.game.release_date);
+    if (status.value) {
+       Object.assign(gamesStatus.value, {
+        [props.game.game_id]: status.value
+      });
+    }
+  }
+  const gameStatus = props.game.game_id ? gamesStatus.value[props.game.game_id] : null;
 </script>
 
 <template>
@@ -28,30 +39,36 @@ const isGamePage = route.params.game_id !== undefined && route.params.game_id ==
         width="80"
         height="80"
         />
-        <h2 class="page-title mb-10">{{ game.name }}</h2>
+        <h2 class="page-title ">{{ game.name }}</h2>
+        <p class="text-lg mb-10 flex items-center gap-2"><span class="font-display font-medium text-orange uppercase tracking-widest">{{ game.genre }}</span> /  <span class="text-yellow">{{gameStatus?.status }}</span> </p>
         <div>
-          <NuxtLink v-if="!isGamePage" class="btn btn-ghost" :to="game.path">Discover {{ game.name }}</NuxtLink>
+          <NuxtLink v-if="!isGamePage" class="btn btn-ghost" :to="game.path"><span>Discover {{ game.name }}</span></NuxtLink>
         </div>
       </div>
       
     </div>
-    <NuxtImg 
-    :src="`/games/${game.game_id}${game.hero_image}`" 
-    class="hero-image" 
-    alt="" 
-    sizes="md:50vw lg:800px"
-    />
+    <div class="hero-image-wrapper">
+      <div class="hero-image">
+        <NuxtImg
+        :src="`/games/${game.game_id}${game.hero_image}`"
+        class="hero-image"
+        alt=""
+        
+        sizes="md:50vw lg:600px"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 @reference 'assets/css/main.css';
 .hero {
-  @apply relative isolate w-full  overflow-hidden pb-[2.7%];
+  @apply relative isolate w-full  overflow-hidden pb-[2.2%];
   .hero-wrapper {
     @apply relative h-[800px] overflow-hidden wrapper-grid;
     &::before {
-      @apply absolute inset-0 bg-gradient-to-tr from-slate-950/70 to-transparent top-0 h-full w-full;
+      @apply absolute inset-0 bg-gradient-to-tr from-yellow-950/90 to-transparent top-0 h-full w-full;
       content: '';
     }
   }
@@ -60,9 +77,15 @@ const isGamePage = route.params.game_id !== undefined && route.params.game_id ==
     z-index: -1;
   }
   .hero-image {
-    @apply absolute right-0 bottom-0 object-contain max-md:hidden h-[80%];
-    
+    @apply h-full w-1/2 ml-auto relative;
+
     z-index: 10;
+    img{
+      @apply object-contain object-bottom-right w-full h-full absolute;
+    }
+  }
+  .hero-image-wrapper {
+    @apply absolute inset-0 max-md:hidden top-[10%] wrapper-grid items-end justify-end pointer-events-none;
   }
   .icon {
     @apply border-2 border-foreground rounded-xl;

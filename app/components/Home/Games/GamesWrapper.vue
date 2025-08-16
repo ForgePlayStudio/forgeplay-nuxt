@@ -4,7 +4,7 @@
 const { data } = await useAsyncData('games', () => {
   return queryCollection('games').limit(3).select('title', 'path', 'game_id', 'cover_image','release_date','name').all();
 });
-const gamesStatus = useState<Record<string, IGameStatus>>('gamesStatus', () => ({}));
+const gamesStatus = useState<Record<string, IGameStatus>>('gamesStatus', () => shallowRef({}));
 if (data.value) {
   for (const game of data.value) {
     if (!game.release_date && gamesStatus.value[game.game_id]) continue;

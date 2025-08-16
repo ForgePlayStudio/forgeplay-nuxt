@@ -20,7 +20,7 @@ import Autoplay from 'embla-carousel-autoplay'
   
 const { data } = await useAsyncData('hero_games', () => {
   return queryCollection('games')
-    .select('title', 'path', 'game_id', 'hero_image', 'hero_bg', 'icon', 'name')
+    .select('title', 'path', 'game_id', 'hero_image', 'hero_bg', 'icon', 'name', 'genre', 'release_date')
     .all();
 });
 

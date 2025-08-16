@@ -1,10 +1,3 @@
-<script lang="ts" setup>
-import HomeMarquee from '~/components/Home/HomeMarquee.vue';
-
-
-
-
-</script>
 
 <template>
   <main id="main">

@@ -4,7 +4,10 @@ export default defineContentConfig({
   collections: {
     content: defineCollection({
       type: 'page',
-      source: '**/*.md'
+      source: '**/*.md',
+      schema: z.object({
+        class: z.string().default('prose')
+      })
     }),
     games: defineCollection({
       type: 'page',
@@ -17,11 +20,15 @@ export default defineContentConfig({
         game_id: z.string(),
         cover_image: z.string().optional(),
         release_date: z.date().optional(),
+        show_full_release_date: z.boolean().default(false),
         genre: z.string().optional(),
         age_rating: z.string().optional(),
         engine: z.string().optional(),
         budget: z.string().optional(),
-        platforms: z.array(z.string()).default([]),
+        platforms: z.array(z.object({
+          platform_id: z.string(),
+          url: z.string().optional(),
+        })).default([]),
         user_rating: z.number().optional(),
       })
     }),

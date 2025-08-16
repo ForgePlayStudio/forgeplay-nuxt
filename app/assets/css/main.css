@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -28,7 +29,7 @@
 } */
 
 :root {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(0.1067 0 0); /* #040404 */
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.141 0.005 285.823);
   --card-foreground: oklch(0.985 0 0);
@@ -93,6 +94,7 @@
   --color-brown-500: oklch(0.4148 0.0447 19.73); /* #7f4c4c */
 
   --color-black: oklch(0.1067 0 0); /* #040404 */
+  --color-white: oklch(0.985 0 0); /* #ffffff */
   --color-yellow: oklch(0.8652 0.1768 90.38); /* #ffcc00 */
   --color-orange: oklch(0.7296 0.178 45.98); /* #FF7D36*/
   --color-red: oklch(0.4655 0.1745 30.9); /* #a51b09 */
@@ -101,7 +103,7 @@
 }
 @theme inline {
   --color-background: var(--color-black);
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--color-white);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -174,6 +176,19 @@
   }
 }
 
+@utility prose-forgeplay {
+  @apply prose prose-neutral prose-invert;
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-orange);
+  --tw-prose-bold: var(--color-yellow);
+  --tw-prose-counters: var(--color-orange);
+  --tw-prose-bullets: var(--color-orange);
+  --tw-prose-links: var(--color-yellow);
+  a {
+    @apply hover:text-orange transition-colors duration-300;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -193,7 +208,8 @@ html.light {
   color-scheme: dark;
 }
 #main {
-  > section {
+  > section,
+  > article {
     @apply wrapper-grid mt-28;
   }
 }

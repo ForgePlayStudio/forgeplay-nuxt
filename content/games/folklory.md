@@ -18,3 +18,7 @@ platforms:
   - platform_id: ios
     url: "#"
 ---
+
+## Best Game ever
+
+Lorem ipsum dolor sit amet consectetur. Pharetra feugiat lorem lacus sollicitudin. Fusce id est auctor eros facilisis laoreet. Turpis suspendisse nisi ac volutpat sed amet..
