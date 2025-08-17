@@ -40,7 +40,15 @@
           <NuxtLink to="/privacy-policy">Privacy Policy</NuxtLink>
           
         </p>
-        <p>Made with ❤️ by <NuxtLink to="https://readthefmanual.it/" external>Laura Paveglio </NuxtLink>(design) & <NuxtLink to="https://strongale.it" external>StrongAle</NuxtLink> (development)</p>
+        <p>
+          Made with ❤️ by 
+          <span>
+            <NuxtLink to="https://readthefmanual.it/" external>Laura Paveglio </NuxtLink>(design)
+           & 
+          
+            <NuxtLink to="https://strongale.it" external>StrongAle</NuxtLink> (development)
+          </span>
+        </p>
       </div>
     </nav>
     
@@ -54,10 +62,10 @@
   ul{
     @apply flex items-center justify-center gap-8 xl:gap-10;
     &.footer-nav__social {
-      @apply xl:gap-28 bg-yellow text-transparent text-stroke-background text-stroke-[2px] text-[2.5rem] font-bold py-10;
-      
+      @apply xl:gap-28 bg-yellow text-background sm:text-transparent sm:text-stroke-background sm:text-stroke-[2px] text-xl sm:text-3xl lg:text-[2.5rem] font-bold py-10 mb-16;
+
         a {
-          @apply flex items-center gap-2 hover:text-background transition-colors duration-200;
+          @apply flex items-center gap-2 hover:text-background transition-colors duration-200 max-md:flex-col;
           svg {
             @apply w-10 h-10 text-background;
           }
@@ -65,7 +73,7 @@
       
     }
     &.footer-nav__links {
-      @apply text-lg mt-16 mb-10;
+      @apply text-lg mb-10 max-sm:hidden;
       li {
        
         a {
@@ -76,14 +84,23 @@
     
   }
   .footer-bottom{
-    @apply flex justify-between items-center py-12;
+    @apply flex justify-between items-center py-12 max-lg:pb-32 max-lg:flex-col gap-4 max-lg:text-center max-sm:text-sm;
     
       a {
         @apply hover:text-orange transition-colors duration-200 underline;
       }
-      span {
+      p:first-child{
+        span {
         @apply inline-block pr-4 mr-4 border-r border-foreground;
       }
+      }
+      p:last-child {
+        span {
+          @apply max-sm:block;
+          
+        }
+      }
+      
     
   }
   .footer-logo {

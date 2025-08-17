@@ -184,6 +184,9 @@
   --tw-prose-counters: var(--color-orange);
   --tw-prose-bullets: var(--color-orange);
   --tw-prose-links: var(--color-yellow);
+  :where(:first-child) {
+    margin-top: 0;
+  }
   a {
     @apply hover:text-orange transition-colors duration-300;
   }

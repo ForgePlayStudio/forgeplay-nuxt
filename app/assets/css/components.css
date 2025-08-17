@@ -39,6 +39,7 @@
     &:hover {
       background-position: 100% 0;
     }
+
     &.btn-ghost {
       @apply text-transparent bg-clip-text relative;
       box-shadow: none;
@@ -79,6 +80,9 @@
           opacity: 1;
         }
       }
+    }
+    &.responsive {
+      @apply max-sm:text-sm max-sm:px-3 max-sm:py-2 max-sm:rounded-lg max-md:text-base max-md:px-4 max-md:py-3;
     }
   }
   .card {

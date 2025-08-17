@@ -28,8 +28,19 @@ export default defineContentConfig({
         platforms: z.array(z.object({
           platform_id: z.string(),
           url: z.string().optional(),
+          platform_name: z.string()
         })).default([]),
         user_rating: z.number().optional(),
+        carousel: z.object({
+          slides: z.array(z.object({
+            url: z.string(),
+            type: z.enum(['image', 'video']).default('image'),
+            alt: z.string().optional()
+          })).default([]),
+          options: z.object({
+            axis: z.enum(['x', 'y']).default('x'),
+          }).optional(),
+        }).optional()
       })
     }),
     stats: defineCollection({
@@ -52,12 +63,12 @@ export default defineContentConfig({
         image: z.string().optional(),
         skills: z.array(z.string()).default([]),
         weapons: z.array(z.string()).default([]),
-        social: z.object({
-          twitter: z.string().optional(),
-          linkedin: z.string().optional(),
-          github: z.string().optional()
-        }).optional()
-        
+        social: z.array(z.object({
+          platform_id: z.string(),
+          url: z.string().optional(),
+          platform_name: z.string()
+        })).default([])
+
       })
     })
     

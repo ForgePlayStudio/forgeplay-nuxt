@@ -39,7 +39,7 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
         width="80"
         height="80"
         />
-        <h2 class="page-title ">{{ game.name }}</h2>
+        <h2 class="page-title w-min min-w-1/2">{{ game.name }}</h2>
         <p class="text-lg mb-10 flex items-center gap-2"><span class="font-display font-medium text-orange uppercase tracking-widest">{{ game.genre }}</span> /  <span class="text-yellow">{{gameStatus?.status }}</span> </p>
         <div>
           <NuxtLink v-if="!isGamePage" class="btn btn-ghost" :to="game.path"><span>Discover {{ game.name }}</span></NuxtLink>
@@ -66,7 +66,7 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
 .hero {
   @apply relative isolate w-full  overflow-hidden pb-[2.2%];
   .hero-wrapper {
-    @apply relative h-[800px] overflow-hidden wrapper-grid;
+    @apply relative pt-32 pb-10 lg:h-[80vh] overflow-hidden wrapper-grid;
     &::before {
       @apply absolute inset-0 bg-gradient-to-tr from-yellow-950/90 to-transparent top-0 h-full w-full;
       content: '';

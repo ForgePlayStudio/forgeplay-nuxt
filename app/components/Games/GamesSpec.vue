@@ -17,7 +17,7 @@ const releaseDate = computed(() => {
       day: 'numeric'
     }) : '';
   } else {
-    return date.getFullYear();
+    return date.getFullYear() || 'TBD';
   }
 
 });
@@ -36,7 +36,7 @@ const releaseDate = computed(() => {
             <span class="game-specs-label">Genre:</span>
             <span class="game-specs-value">{{ game.genre }}</span>
           </li>
-          <li v-if="game.release_date" class="game-specs-item">
+          <li v-if="releaseDate" class="game-specs-item">
             <span class="game-specs-label">Release Date:</span>
             <span class="game-specs-value">{{ releaseDate }}</span>
           </li>
@@ -75,19 +75,21 @@ const releaseDate = computed(() => {
 
 .games-specs {
   container-type: normal;
-  @apply w-full max-w-max max-lg:max-w-prose;
+  @apply w-full max-w-max max-lg:max-w-prose lg:sticky lg:top-20;
 
   .game-specs-title {
     @apply text-2xl text-background bg-gradient-to-br from-neutral-200 to-neutral-300 px-4 py-2 rounded-lg -translate-y-1/2 relative flex items-center gap-2 w-full max-lg:max-w-48;
   }
   .game-specs-content {
-    @apply lg:w-max flex flex-col gap-8 sm:max-lg:flex-row items-start;
+    @apply lg:w-max grid gap-8  items-start;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   .game-specs-list {
-    @apply flex flex-col gap-2 max-lg:flex-row max-lg:flex-wrap gap-x-6;
+    @apply flex flex-col gap-2 sm:max-lg:flex-row flex-wrap gap-x-6;
   }
   .game-specs-item {
-    @apply flex justify-between gap-4;
+    @apply grid grid-cols-2 gap-4 max-lg:w-max;
+    grid-template-columns: max-content 1fr;
   }
   .game-specs-label {
     @apply text-orange shrink-0;
