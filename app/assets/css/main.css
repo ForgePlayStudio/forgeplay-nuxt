@@ -210,7 +210,8 @@ html.dark {
 html.light {
   color-scheme: dark;
 }
-#main {
+#main,
+.renderer-wrapper {
   > section,
   > article {
     @apply wrapper-grid mt-28;

@@ -38,6 +38,22 @@ export default defineNuxtConfig({
     '@/assets/css/components.css',
     '@/assets/css/typography.css',
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      title: 'ForgePlay Studio',
+      meta: [
+        { name: 'description', content: '' },
+        { property: 'og:title', content: 'ForgePlay Studio' },
+        { property: 'og:description', content: '' },
+        { property: 'og:image', content: '' },
+      ]
+    }
+  },
+  site: {
+    url: 'https://forgeplay.studio/',
+    name: 'ForgePlay Studio'
+  },
   shadcn: {
     /**
      * Prefix for all the imported component

@@ -11,7 +11,7 @@ export default defineContentConfig({
     }),
     games: defineCollection({
       type: 'page',
-      source: 'games/*.md',
+      source: {include: 'games/*.md', exclude: ['games/index.md']},
       schema: z.object({
         hero_image: z.string(),
         hero_bg: z.string(),

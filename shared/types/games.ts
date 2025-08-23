@@ -8,6 +8,7 @@ export interface IGame {
 }
 export interface IGameStatus {
     status: 'Work in progress' | 'Released' | 'Concept';
+    status_id: 'in_progress' | 'released' | 'concept';
     comingSoon?: boolean;
     now?: Date;
     releaseDate?: Date;

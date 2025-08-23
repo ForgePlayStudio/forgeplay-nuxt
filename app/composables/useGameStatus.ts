@@ -6,6 +6,7 @@ export const useGameStatus = (date?:string) => {
   if (!date) {
     status.value = {
       status: 'Concept',
+      status_id: 'concept',
       comingSoon: false,
     }
     
@@ -19,6 +20,7 @@ export const useGameStatus = (date?:string) => {
       
       status.value = {
         status: 'Work in progress',
+        status_id: 'in_progress',
         comingSoon: timeDiff < oneYear,
         now,
         releaseDate,
@@ -27,6 +29,7 @@ export const useGameStatus = (date?:string) => {
     } else if (releaseDate <= now) {
       status.value = {
         status: 'Released',
+        status_id: 'released',
         now,
         releaseDate,
       }

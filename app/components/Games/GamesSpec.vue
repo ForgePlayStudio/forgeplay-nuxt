@@ -42,7 +42,7 @@ const releaseDate = computed(() => {
           </li>
           <li v-if="game.age_rating" class="game-specs-item">
             <span class="game-specs-label">Rating:</span>
-            <span class="game-specs-value">{{ game.age_rating }}+</span>
+            <span class="game-specs-value">{{ game.age_rating }}</span>
           </li>
           <li v-if="game.engine" class="game-specs-item">
             <span class="game-specs-label">Engine:</span>
