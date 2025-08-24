@@ -64,7 +64,7 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
 <style scoped>
 @reference 'assets/css/main.css';
 .hero {
-  @apply relative isolate w-full  overflow-hidden pb-[2.2%];
+  @apply relative isolate w-full  overflow-hidden pb-[3%] z-2;
   .hero-wrapper {
     @apply relative pt-32 pb-10 lg:h-[80vh] overflow-hidden wrapper-grid;
     &::before {
@@ -81,11 +81,11 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
 
     z-index: 10;
     img{
-      @apply object-contain object-bottom-right w-full h-full absolute;
+      @apply object-contain object-bottom-right w-full h-auto absolute bottom-0 translate-y-[5%];
     }
   }
   .hero-image-wrapper {
-    @apply absolute inset-0 max-md:hidden top-[10%] wrapper-grid items-end justify-end pointer-events-none;
+    @apply absolute inset-0 max-md:hidden wrapper-grid items-end justify-end pointer-events-none pb-[2.75%];
   }
   .icon {
     @apply border-2 border-foreground rounded-xl;
@@ -93,6 +93,9 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
   .hero-content {
     @apply h-full flex flex-col justify-center gap-4 relative;
     filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
+  }
+  & + * {
+    @apply -mt-[3%];
   }
 }
 </style>

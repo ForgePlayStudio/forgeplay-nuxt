@@ -214,6 +214,9 @@ html.light {
 .renderer-wrapper {
   > section,
   > article {
-    @apply wrapper-grid mt-28;
+    @apply wrapper-grid pt-28;
+    &.compressed {
+      @apply pt-0;
+    }
   }
 }

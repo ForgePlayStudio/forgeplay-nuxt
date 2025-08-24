@@ -3,13 +3,17 @@ const route = useRoute();
 const { data } = await useAsyncData(route.path, () => {
   return queryCollection('games').path(route.path).first();
 });
-
+useHead({
+  title: data.value?.title,
+})
 </script>
 
 <template>
   <main v-if="data" id="main" class="game-page">
+    
     <GamesHero :game="data" />
-    <section class="page-content">
+    <section class="page-content relative">
+      <SvgNoiseBg />
       <div class="flex flex-col lg:flex-row gap-6 justify-between">
         <aside class="sidebar"><GamesSpec :game="data" />
         
@@ -30,6 +34,11 @@ const { data } = await useAsyncData(route.path, () => {
 
 <style scoped>
 @reference 'assets/css/main.css';
+.page-content{
+  @apply isolate;
+  background-image: radial-gradient(circle 30vw at 85% 30%, --alpha(var(--color-orange) / 50%), transparent);
+  
+}
 .sidebar {
   @apply lg:order-2 shrink-0 pb-20;
 }

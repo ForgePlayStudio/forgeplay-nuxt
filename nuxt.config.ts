@@ -47,6 +47,26 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'ForgePlay Studio' },
         { property: 'og:description', content: '' },
         { property: 'og:image', content: '' },
+        { name: 'theme-color', content: '#040404' },
+        { name: 'msapplication-TileColor', content: '#ffcc00' }
+      ],
+      link: [
+        // Basic favicon
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        // Standard sizes
+        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+        
+        
+        // Apple devices
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        
+        // Android devices  
+        { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/android-chrome-192x192.png' },
+        { rel: 'icon', type: 'image/png', sizes: '512x512', href: '/android-chrome-512x512.png' },
+        
+        // Web App Manifest
+        { rel: 'manifest', href: '/site.webmanifest' }
       ]
     }
   },

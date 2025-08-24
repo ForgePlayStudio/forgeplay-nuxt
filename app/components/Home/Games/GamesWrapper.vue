@@ -21,7 +21,7 @@ if (data.value) {
 
 <template>
   <section>
-    
+    <SvgNoiseBg />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-10 pb-10 relative items-start">
       <BaseCopyBlock
         kicker="Games"
@@ -53,6 +53,10 @@ if (data.value) {
     </section>
 </template>
 
-<style lang="postcss" scoped>
-
+<style scoped>
+ section{
+  position: relative;
+  isolation: isolate;
+  background-image: radial-gradient(circle 30vw at 70% 40%, --alpha(var(--color-orange) / 40%), transparent);
+ }
 </style>

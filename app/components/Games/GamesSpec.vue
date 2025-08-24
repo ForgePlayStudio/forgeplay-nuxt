@@ -25,7 +25,7 @@ const releaseDate = computed(() => {
 
 <template>
   <div class="games-specs card">
-    <div class="w-full pt-0">
+    <div class="w-full pt-0 p-10">
       <h2 class="game-specs-title">
         <NuxtImg src="/images/icons/chest.svg" alt="" class="size-10" />
         Specs
@@ -78,7 +78,7 @@ const releaseDate = computed(() => {
   @apply w-full max-w-max max-lg:max-w-prose lg:sticky lg:top-20;
 
   .game-specs-title {
-    @apply text-2xl text-background bg-gradient-to-br from-neutral-200 to-neutral-300 px-4 py-2 rounded-lg -translate-y-1/2 relative flex items-center gap-2 w-full max-lg:max-w-48;
+    @apply text-2xl text-background bg-gradient-to-br from-neutral-200 to-neutral-300 px-4 py-2 rounded-lg -translate-y-1/2 relative flex items-center gap-2 w-full max-lg:max-w-48 font-display uppercase tracking-widest;
   }
   .game-specs-content {
     @apply lg:w-max grid gap-8  items-start;
@@ -92,7 +92,7 @@ const releaseDate = computed(() => {
     grid-template-columns: max-content 1fr;
   }
   .game-specs-label {
-    @apply text-orange shrink-0;
+    @apply text-yellow shrink-0;
   }
   .game-specs-value {
     @apply text-right shrink-0;

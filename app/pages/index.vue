@@ -3,7 +3,7 @@
 <template>
   <main id="main">
     <HomeHero />
-    <section>
+    <section class="grid-bg">
       <BaseCopyBlock
         kicker="About ForgePlay Studio"
         title="A team of video game enthusiasts..."

@@ -4,7 +4,7 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 useHead({
-  title: page.value?.title + ' - ForgePlay Studio',
+  title: page.value?.title,
 })
 </script>
 

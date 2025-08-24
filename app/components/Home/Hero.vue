@@ -52,6 +52,7 @@ const { data } = await useAsyncData('hero_games', () => {
 <style  scoped>
 .embla {
     overflow: hidden;
+    position: relative;
   }
   .embla__container {
     display: flex;
@@ -62,7 +63,7 @@ const { data } = await useAsyncData('hero_games', () => {
   }
   .embla__controls {
     position: absolute;
-    bottom: 6rem;
+    bottom: calc(3vw + 2rem);
     left: 0;
     z-index: 10;
   }
