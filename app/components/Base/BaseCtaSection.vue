@@ -36,7 +36,7 @@ const sectionBg = computed(() => {
   </section>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 .cta-section {
   --section-bg: v-bind(sectionBg);
   background-image: var(--section-bg);

@@ -102,11 +102,45 @@
         inset 0 -6px 1px --alpha(var(--color-brown-950) / 50%),
         inset 0 6px 1px --alpha(var(--color-white) / 20%);
     }
+    &.glass {
+      @apply backdrop-blur-sm from-neutral-500/50;
+      box-shadow:
+        inset 0 -6px 1px --alpha(var(--color-neutral-900) / 30%),
+        inset 0 6px 1px --alpha(var(--color-white) / 10%);
+    }
   }
   .grid-bg {
     background-image: url("/images/grid-bg.svg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
+  }
+  .noise {
+    @apply absolute inset-0 pointer-events-none opacity-70 w-full h-full -z-10;
+  }
+  .grid-background {
+    @apply absolute inset-0;
+    background-image: radial-gradient(
+      ellipse 110vw 45vw at bottom,
+      --alpha(var(--color-orange) / 100%),
+      transparent
+    );
+    z-index: -1;
+    mask:
+      radial-gradient(
+        ellipse 110vw 20vw at 50% 80%,
+        rgb(0 0 0 / 60%),
+        transparent
+      ),
+      linear-gradient(to top, black, transparent 15%);
+    mask-composite: add;
+
+    &::after {
+      @apply absolute inset-0;
+      background: url("/images/pixel-bg.svg"), url("/images/grid_lines.svg");
+      content: "";
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
   }
 }

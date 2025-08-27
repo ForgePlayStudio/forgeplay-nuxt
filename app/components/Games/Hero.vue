@@ -81,7 +81,7 @@ if (props.game.game_id && !gamesStatus.value[props.game.game_id]) {
 
     z-index: 10;
     img{
-      @apply object-contain object-bottom-right w-full h-auto absolute bottom-0 translate-y-[5%];
+      @apply object-contain object-bottom-right w-full h-auto absolute bottom-0 translate-y-[5%] max-h-full;
     }
   }
   .hero-image-wrapper {

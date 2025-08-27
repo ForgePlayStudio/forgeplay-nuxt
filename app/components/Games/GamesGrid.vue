@@ -58,7 +58,7 @@ if (data.value) {
         
 
 
-            <NuxtImg :src="`/games/${game.game_id}${game.cover_image}`" :alt="game.title" width="600" height="350" class="rounded-lg drop-shadow-md" />
+            <NuxtImg :src="`/games/${game.game_id}${game.cover_image}`" :alt="game.title" width="600" height="350" class="rounded-lg drop-shadow-md border-4 border-orange" />
           </div>
         </div>
         
