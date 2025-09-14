@@ -1,0 +1,22 @@
+slug: jay
+name: Giacomo Jay Ganduglia
+role: Creative Director / Lead Artist
+social: [
+  {
+    platform_id: 'behance',
+    url: 'https://www.behance.net/cansone/projects',
+    platform_name: Behance
+  },
+  {
+    platform_id: 'instagram',
+    url: 'https://www.instagram.com/cans_one/',
+    platform_name: Instagram
+  },
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/giacomojayganduglia/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']
