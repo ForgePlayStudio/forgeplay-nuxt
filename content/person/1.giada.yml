@@ -1,0 +1,12 @@
+slug: giada
+name: Giada Egrotelli
+role: Marketing Specialist
+social: [
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/giada-egrotelli-32911186/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']

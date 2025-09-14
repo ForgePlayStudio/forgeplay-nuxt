@@ -1,0 +1,12 @@
+slug: andrea
+name: Andrea Mancuso
+role: Software Developer
+social: [
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/andrea-mancuso-8ba894196/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']

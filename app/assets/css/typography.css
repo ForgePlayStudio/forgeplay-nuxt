@@ -10,7 +10,7 @@
   .section-title {
     @apply text-xl font-bold md:text-[2.5rem] text-foreground leading-tight drop-shadow-lg text-shadow-brown-950/50;
     .highlight & {
-      @apply text-2xl md:text-[4rem];
+      @apply text-2xl/none mt-2 md:text-[4rem];
     }
   }
   .page-title {

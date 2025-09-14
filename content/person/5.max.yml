@@ -1,0 +1,22 @@
+slug: max
+name: Massimiliano Ariani
+role: Lead Game Designer / CEO
+ocial: [
+  {
+    platform_id: 'x',
+    url: 'https://x.com/maxariani',
+    platform_name: X / Twitter
+  },
+  {
+    platform_id: 'web',
+    url: 'https://www.ntwalkers.it/',
+    platform_name: Website
+  },
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/massimilianoariani/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']

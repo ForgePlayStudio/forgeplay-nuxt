@@ -1,0 +1,12 @@
+slug: daniele
+name: Daniele Terracina
+role: Quest & Narrative Design
+social: [
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/daniele-terracina-838ba741/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']

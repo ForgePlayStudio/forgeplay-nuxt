@@ -1,0 +1,17 @@
+slug: ale
+name: Alessio Falchi
+role: UX/UI design / Designer
+social: [
+  {
+    platform_id: 'web',
+    url: 'https://strongale.it',
+    platform_name: Website
+  },
+  {
+    platform_id: 'linkedin',
+    url: 'https://www.linkedin.com/in/alessio-falchi/',
+    platform_name: Linkedin
+  }
+]
+skills: ['Skill 1', 'Skill 2']
+weapons: ['Weapon 1', 'Weapon 2']
