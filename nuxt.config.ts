@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     format: ['avif', 'webp'],
     alias: {
       games: '/images/games',
+      team: '/images/team',
     }
   },
   vite: {

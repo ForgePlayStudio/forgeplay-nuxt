@@ -58,6 +58,7 @@ export default defineContentConfig({
       type: 'data',
       source: 'person/*.yml',
       schema: z.object({
+        slug: z.string(),
         name: z.string(),
         role: z.string(),
         image: z.string().optional(),
@@ -65,8 +66,8 @@ export default defineContentConfig({
         weapons: z.array(z.string()).default([]),
         social: z.array(z.object({
           platform_id: z.string(),
-          url: z.string().optional(),
-          platform_name: z.string()
+          url: z.string(),
+          platform_name: z.string().optional()
         })).default([])
 
       })

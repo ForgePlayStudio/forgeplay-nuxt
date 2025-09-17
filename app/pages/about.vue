@@ -45,6 +45,7 @@ useHead({
       
       </BaseCopyBlock>
   </section>
+    <AboutTeamWrapper />
   <BaseCtaSection
       kicker="Beta testing"
       title="Help us make our games better"

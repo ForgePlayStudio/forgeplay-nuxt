@@ -1,14 +1,14 @@
 slug: max
 name: Massimiliano Ariani
 role: Lead Game Designer / CEO
-ocial: [
+social: [
   {
-    platform_id: 'x',
+    platform_id: 'twitter',
     url: 'https://x.com/maxariani',
     platform_name: X / Twitter
   },
   {
-    platform_id: 'web',
+    platform_id: 'link',
     url: 'https://www.ntwalkers.it/',
     platform_name: Website
   },
