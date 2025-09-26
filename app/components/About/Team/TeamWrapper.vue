@@ -1,34 +1,78 @@
 <script lang="ts" setup>
-import type { TIconId } from '~/components/Svg/Social.vue';
+import type { PersonCollectionItem } from '@nuxt/content';
 
 const { data } = await useAsyncData('team', () => {
   return queryCollection('person').all();
 });
-const hideperson = false;
+const selectedPerson = ref(null as number | null);
+
 </script>
 
 <template>
-  <section>
-    <div class="team-bg">
+  <section v-if="data">
+    <div class="team-bg" :class="{'active': selectedPerson !== null}">
       <NuxtImg src="/team/team_background.png" alt="Team background" class="w-full h-auto" />
-    </div>
-    <div v-if="hideperson">
-      <div v-for="person in data" :key="person.slug">
-        <h3 class="text-2xl font-bold mb-2">{{ person.name }}</h3>
-        <ul>
-          <li v-for="link in person.social" :key="link.url">
-            <a :href="link.url" target="_blank" rel="noopener noreferrer">
-              {{ link.platform_name }}
-              <SvgSocial :icon-id="(link.platform_id as TIconId)" />
-            </a>
-          </li>
-        </ul>
-        <NuxtImg :src="person.image || `/team/${person.slug}.png`" :alt="`Pixel art portrait of ${person.name}`" />
+      <div v-if="typeof selectedPerson !== 'number'" class="team-preview">
+        <div 
+        v-for="person in data" 
+        :key="person.slug" >
+          <NuxtImg 
+          
+          :src="person.image || `/team/${person.slug}.png`" 
+          alt=""
+          aria-hidden="true"
+          class="flex-1 basis-auto"
+          />
+        </div>
+        
       </div>
+      <AboutTeamMember v-else :person="(data[selectedPerson] as PersonCollectionItem)" class="absolute inset-4 md:inset-10 xl:inset-20" />
     </div>
+    <div class="team-menu">
+      <h3 class="text-3xl lg:text-4xl font-bold my-4">Select a Character</h3>
+      <ul class="flex gap-4 justify-center">
+        <li 
+        v-for="person, index in data" 
+        :key="person.slug" 
+        class="cursor-pointer aspect-square  hover:bg-orange-200 rounded-lg pt-2 overflow-hidden"
+        :class="{'bg-orange': selectedPerson === index, 'bg-white': selectedPerson !== index}"
+        @click="selectedPerson = index"
+        >
+          <NuxtImg 
+          :src="person.image || `/team/${person.slug}.png`" 
+          :alt="person.name"
+          
+          class="w-full h-auto max-w-36"
+          />
+          
+        </li>
+      </ul>
+    </div>
+    <AboutTeamMember v-if="typeof selectedPerson === 'number'" :person="(data[selectedPerson] as PersonCollectionItem)" class="md:hidden" />
+    
   </section>
 </template>
 
-<style lang="postcss" scoped>
-
+<style scoped>
+@reference 'assets/css/main.css';
+.team-bg {
+ @apply aspect-video overflow-hidden rounded-2xl bg-[#383641] relative max-md:hidden;
+ img{
+  @apply w-full h-auto transition-all duration-500 ease-in-out;
+ }
+ &.active {
+  @apply bg-[#383641]/50;
+  img{
+    @apply opacity-50 blur-sm scale-150;
+  }
+  
+ }
+}
+.team-preview {
+  @apply absolute inset-1/7 flex items-center justify-center gap-4;
+  
+}
+.team-menu {
+  @apply w-max mx-auto md:-translate-y-3/5 max-w-full;
+}
 </style>
