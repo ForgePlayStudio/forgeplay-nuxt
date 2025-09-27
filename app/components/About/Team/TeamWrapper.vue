@@ -26,11 +26,11 @@ const selectedPerson = ref(null as number | null);
         </div>
         
       </div>
-      <AboutTeamMember v-else :person="(data[selectedPerson] as PersonCollectionItem)" class="absolute inset-4 md:inset-10 xl:inset-20" />
+      <AboutTeamMember v-else :person="(data[selectedPerson] as PersonCollectionItem)" class="md:absolute  md:inset-10 xl:inset-20" />
     </div>
     <div class="team-menu">
       <h3 class="text-3xl lg:text-4xl font-bold my-4">Select a Character</h3>
-      <ul class="flex gap-4 justify-center">
+      <ul class="grid gap-2 sm:gap-4 justify-center grid-cols-3 sm:grid-cols-6 ">
         <li 
         v-for="person, index in data" 
         :key="person.slug" 
@@ -48,7 +48,7 @@ const selectedPerson = ref(null as number | null);
         </li>
       </ul>
     </div>
-    <AboutTeamMember v-if="typeof selectedPerson === 'number'" :person="(data[selectedPerson] as PersonCollectionItem)" class="md:hidden" />
+   
     
   </section>
 </template>
@@ -56,7 +56,7 @@ const selectedPerson = ref(null as number | null);
 <style scoped>
 @reference 'assets/css/main.css';
 .team-bg {
- @apply aspect-video overflow-hidden rounded-2xl bg-[#383641] relative max-md:hidden;
+ @apply md:aspect-video overflow-hidden rounded-2xl bg-[#383641] relative;
  img{
   @apply w-full h-auto transition-all duration-500 ease-in-out;
  }
@@ -73,6 +73,6 @@ const selectedPerson = ref(null as number | null);
   
 }
 .team-menu {
-  @apply w-max mx-auto md:-translate-y-3/5 max-w-full;
+  @apply w-max mx-auto md:-translate-y-3/5 max-w-full mb-10;
 }
 </style>

@@ -15,7 +15,7 @@
   }
   .page-title {
     --text-stroke: clamp(1px, 0.02em, 2px);
-    @apply text-7xl font-bold sm:text-8xl/none uppercase text-transparent text-shadow-lg text-shadow-brown-950/10 leading-none;
+    @apply text-5xl font-bold sm:text-8xl/none uppercase text-transparent text-shadow-lg text-shadow-brown-950/10 leading-none;
 
     -webkit-text-stroke: var(--text-stroke) white;
     &::first-line {
