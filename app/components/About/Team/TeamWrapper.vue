@@ -11,7 +11,7 @@ const selectedPerson = ref(null as number | null);
 <template>
   <section v-if="data">
     <div class="team-bg" :class="{'active': selectedPerson !== null}">
-      <NuxtImg src="/team/team_background.png" alt="Team background" class="w-full h-auto" />
+      <NuxtImg src="/team/team_background.png" alt="Team background" class="team-bg_bg w-full h-auto" />
       <div v-if="typeof selectedPerson !== 'number'" class="team-preview">
         <div 
         v-for="person in data" 
@@ -56,20 +56,31 @@ const selectedPerson = ref(null as number | null);
 <style scoped>
 @reference 'assets/css/main.css';
 .team-bg {
- @apply md:aspect-video overflow-hidden rounded-2xl bg-[#383641] relative;
+ @apply md:aspect-video overflow-hidden rounded-2xl bg-[#383641] relative ;
  img{
   @apply w-full h-auto transition-all duration-500 ease-in-out;
  }
  &.active {
   @apply bg-[#383641]/50;
-  img{
+  .team-bg_bg{
     @apply opacity-50 blur-sm scale-150;
   }
   
  }
+ @media (max-width: 767px) {
+  @apply aspect-auto max-h-[50vw] h-full transition-all duration-1000 ease-in-out overflow-hidden;
+  .team-bg_bg{
+    @apply absolute inset-x-0 top-0 w-full h-auto;
+  }
+  &.active {
+    @apply max-h-[100vh];
+    
+  }
+ }
 }
 .team-preview {
-  @apply absolute inset-1/7 flex items-center justify-center gap-4;
+  @apply relative md:absolute max-w-full max-md:p-4 md:inset-1/7 flex items-center justify-center gap-1 md:gap-4;
+  
   
 }
 .team-menu {
