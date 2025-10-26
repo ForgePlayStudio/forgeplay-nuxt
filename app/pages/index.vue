@@ -23,7 +23,7 @@
       
     </section>
     <HomeGamesWrapper />
-    <HomeMarquee />
+    <HomeMarquee class="mt-28" />
     <BaseCtaSection
       kicker="Beta testing"
       title="Help us make our games better"

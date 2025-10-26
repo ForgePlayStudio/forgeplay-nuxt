@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <BaseMarquee class="mt-28" :repeat="2">
+  <BaseMarquee :repeat="2">
     <h2 class="marquee-text font-display font-bold text-stroke-balanced text-stroke-foreground uppercase text-transparent leading-none">
       :\>_ we forge your fun
     </h2>
