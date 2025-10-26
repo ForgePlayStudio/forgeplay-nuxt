@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   image: {
+    provider: 'netlify',
     format: ['avif', 'webp'],
     alias: {
       games: '/images/games',
@@ -33,6 +34,7 @@ export default defineNuxtConfig({
    'motion-v/nuxt',
    'shadcn-nuxt',
    'nuxt-seo-utils',
+   '@netlify/nuxt',
   ],
   css: [
     '@/assets/css/main.css',
