@@ -103,11 +103,12 @@ const handleSubmit = (event:Event) => {
     @apply font-sans p-2 w-full text-lg xl:text-xl bg-transparent border-b rounded-none border-primary transition-colors duration-500 text-transparent placeholder:text-transparent;
     &:focus{
       outline: none;
-      @apply bg-stone-50 text-stone-900 placeholder:text-stone-500;
+      @apply bg-neutral-900 text-foreground placeholder:text-foreground/50;
     }
     &:focus, &:not(:placeholder-shown){
-      @apply text-stone-900;
+      @apply text-foreground;
     }
+    
     &:is(.submitted :invalid){
       
       @apply border-red-700 bg-red-200 ;

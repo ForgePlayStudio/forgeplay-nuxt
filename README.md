@@ -1,4 +1,4 @@
-# Nuxt Minimal Starter
+# Forge Play Studio Website
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
